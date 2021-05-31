@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title>想不到名字云 — 课程作业</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="host_version"> 
+
+	<!-- Modal -->
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header tit-up">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">登录</h4>
+			</div>
+			<div class="modal-body customer-box">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs">
+					<li><a class="active" href="#Login" data-toggle="tab">登录</a></li>
+					<li><a href="#Registration" data-toggle="tab">注册</a></li>
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active" id="Login">
+						<form role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="email1" placeholder="名称 " type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="exampleInputPassword1" placeholder="密码" type="email">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-10">
+									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+										登录
+									</button>
+									<a class="for-pwd" href="javascript:;">忘记密码？</a>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="tab-pane" id="Registration">
+						<form role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" placeholder="名称" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="email" placeholder="Email" type="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="mobile" placeholder="电话" type="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="password" placeholder="密码" type="password">
+								</div>
+							</div>
+							<div class="row">							
+								<div class="col-sm-10">
+									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
+										提交
+									</button>
+									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
+										取消</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->	
+	
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+					<img src="images/logo-hosting.png" alt="" />
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-host">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active"><a class="nav-link" href="index.html">主页</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">关于</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">特征</a></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">服务器 </a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="#">网站托管 </a>
+								<a class="dropdown-item" href="#">WordPress </a>
+								<a class="dropdown-item" href="#">服务器 </a>
+								<a class="dropdown-item" href="#">经销商 </a>
+								<a class="dropdown-item" href="#">独立主机 </a>
+							</div>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="#">域名</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">定价</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">联系</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+                        <li><a class="hover-btn-new log" href="#" data-toggle="modal" data-target="#login"><span>登录</span></a></li>
+                    </ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+	
+	<div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false" >
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleControls" data-slide-to="1"></li>
+			<li data-target="#carouselExampleControls" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="carousel-item active">
+				<div id="home" class="first-section" style="background-image:url('images/slider-01.jpg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-right">
+									<div class="big-tagline">
+										<h2><strong>虚拟主机</strong> 托管</h2>
+										<p class="lead">使用想不到名字云，您可以推广您的所有托管、域和电子邮件服务 </p>
+											<a href="#" class="hover-btn-new"><span>联系我们</span></a>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="#" class="hover-btn-new"><span>了解更多</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<div class="carousel-item">
+				<div id="home" class="first-section" style="background-image:url('images/slider-02.jpg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-left">
+									<div class="big-tagline">
+										<h2 data-animation="animated zoomInRight"><strong>虚拟主机</strong> 托管</h2>
+										<p class="lead" data-animation="animated fadeInLeft">使用 想不到名字云，您可以推广您的所有托管、域和电子邮件服务 </p>
+											<a href="#" class="hover-btn-new"><span>联系我们</span></a>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="#" class="hover-btn-new"><span>了解更多</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<div class="carousel-item">
+				<div id="home" class="first-section" style="background-image:url('images/slider-03.jpg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-center">
+									<div class="big-tagline">
+										<h2 data-animation="animated zoomInRight"><strong>VPS</strong> 服务器 </h2>
+										<p class="lead" data-animation="animated fadeInLeft">独立IP，适用任何操作系统（CentOS、Windows、Debian、Fedora）免费重启</p>
+											<a href="#" class="hover-btn-new"><span>联系我们</span></a>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="#" class="hover-btn-new"><span>了解更多</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<!-- Left Control -->
+			<a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				<span class="fa fa-angle-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+
+			<!-- Right Control -->
+			<a class="new-effect carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				<span class="fa fa-angle-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+	
+	
+	<div id="domain" class="section wb">
+        <div class="container">
+            <div class="row text-center">
+
+                <div class="col-lg-12">
+                    <form class="checkdomain form-inline">
+                        <div class="checkdomain-wrapper">
+                            <div class="form-group">
+                                <label class="sr-only" for="domainnamehere">域名</label>
+                                <input type="text" class="form-control" id="domainnamehere" placeholder="在此处输入域名..">
+                                <button type="submit" class="btn btn-primary grd1"><i class="fa fa-search"></i></button>
+                            </div>
+                            <hr>
+                            <div class="clearfix"></div>
+                            <div class="checkbox checkbox-warning">
+                                <input id="domaincom" type="checkbox" class="styled" checked>
+                                <label for="domaincom">.com</label>
+                            </div>
+                            <div class="checkbox checkbox-warning">
+                                <input id="domainnet" type="checkbox" class="styled" checked>
+                                <label for="domainnet">.net</label>
+                            </div>
+                            <div class="checkbox checkbox-warning">
+                                <input id="domainorg" type="checkbox" class="styled">
+                                <label for="domainorg">.org</label>
+                            </div>
+                            <div class="checkbox checkbox-warning">
+                                <input id="domaintv" type="checkbox" class="styled">
+                                <label for="domaintv">.tv</label>
+                            </div>
+                            <div class="checkbox checkbox-warning">
+                                <input id="domaininfo" type="checkbox" class="styled">
+                                <label for="domaininfo">.info</label>
+                            </div>
+                        </div><!-- end checkdomain-wrapper -->
+                    </form>
+                </div>
+				<div class="col-lg-12">
+                    <div class="customwidget text-center">
+                        <h1>寻找您需要的域名</h1>
+                        <p>使用我们的域名搜索，您可以搜索大量扩展名的域名。</p>
+						<p>追求高质量的标准，SEO友好，简单和干净的代码。为了在这个不断发展的领域保持有效和领先，我总是试图接触最新的新闻和编程的最新方法.</p>
+                        <ul class="list-inline">
+                            <li><i class="fa fa-check"></i> 成功售出XX域名</li>
+                            <li><i class="fa fa-check"></i> 托管超过4千个网站</li>
+                        </ul>
+                        <!-- end list -->
+                        <a href="#" class="hover-btn-new"><span><strong>托管您的网站</strong></span></a>
+                    </div>
+                </div>
+				
+                <!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+	
+    <div id="overviews" class="section lb">
+        <div class="container">
+            <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <h3>公告</h3>
+                    <p class="lead">了解我们的最新咨询</p>
+                </div>
+            </div><!-- end title -->
+        
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h4>2021年05月31日更新</h4>
+                        <h2>【置顶】千纪云服务条款(TOS)和产品使用政策(AUP)</h2>
+                        <p>2021年05月31日</p>
+
+                        <p>如你在千纪云注册账号，即代表你接受该协议；如违反该条款，你会受到处理/制裁，包括但不限于...
+						 </p>
+
+                        <a href="#" class="hover-btn-new"><span>阅读更多</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/about_02.jpg" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+			</div>
+			<div class="row align-items-center">
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/about_03.jpg" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h2>余额充值活动 · 充得多,送得多,最低7折</h2>
+                        <p>2021年05月28日</p>
+
+                        <p> 2021年05月28日公告：现在你充值13.5元即可获得15元的账户余额，账户余额可用来购买千纪云主机/CDN服务、或自动续费你现在已购买的主机/CDN服务。</p>
+
+                        <a href="#" class="hover-btn-new"><span>阅读更多</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <section class="page-section">
+		<div class="container">
+			 <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <h3>公司历史</h3>
+                    <p class="lead">一段没有意义的公司历史介绍，想不出来应有的公司文化或者宣传语</p>
+                </div>
+            </div><!-- end title -->
+			<div class="timeline">
+				<div class="timeline__wrap">
+					<div class="timeline__items">
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-01">
+								<h2>2021年05月31日 20:45</h2>
+								<p>公司正式在我手上成立（开始敲代码...）</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-02">
+								<h2>2021年05月31日 20:46</h2>
+								<p>这是公司成立的第二段历史，简短的1分钟过去，我们公司又多了十几个字母...</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-03">
+								<h2>2021年05月31日 20:46</h2>
+								<p>这是公司成立的第三段历史，简短十几秒过去，我们公司又多了十几个字母...</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-04">
+								<h2>2021年05月31日 20:47</</h2>
+								<p>这是公司成立的第四段历史，简短的1分钟过去，我们公司又多了十几个字母...</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-01">
+								<h2>2021年05月31日 20:47</h2>
+								<p>我们公司的历史足够深厚，所以还有第二页</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-02">
+								<h2>2021年05月31日 20:47</h2>
+								<p>深厚公司文化的一撇，深厚公司文化的一撇，深厚公司文化的一撇，深厚公司文化的一撇</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-03">
+								<h2>2021年05月31日 20:47</h2>
+								<p>深厚公司文化的一撇，深厚公司文化的一撇，深厚公司文化的一撇，深厚公司文化的一撇</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-04">
+								<h2>2021年05月31日 20:47</h2>
+								<p>深厚公司文化的一撇，深厚公司文化的一撇，深厚公司文化的一撇，深厚公司文化的一撇</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="section cl">
+		<div class="container">
+			<div class="row text-left stat-wrap">
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-hosting"></i></span>
+					<p class="stat_count">12000</p>
+					<h3>托管网站</h3>
+				</div><!-- end col -->
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-domain-registration"></i></span>
+					<p class="stat_count">24000</p>
+					<h3>售出域名</h3>
+				</div><!-- end col -->
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-mail"></i></span>
+					<p class="stat_count">5000</p>
+					<h3>电子营销</h3>
+				</div><!-- end col -->
+			</div><!-- end row -->
+		</div><!-- end container -->
+	</div><!-- end section -->
+
+    <div id="pricing" class="section lb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>准备好了吗？</h3>
+                <p>下面都是我编的服务器，快来充钱买吧！！！ </p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="message-box">
+                        <ul class="nav nav-pills nav-stacked" id="myTabs">
+                            <li><a class="active" href="#tab1" data-toggle="pill">月订阅</a></li>
+                            <li><a href="#tab2" data-toggle="pill">年订阅</a></li>
+                        </ul>
+                    </div>
+                </div><!-- end col -->
+            </div>
+
+            <hr class="invis">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tab-content">
+                        <div class="tab-pane active fade show" id="tab1">
+                            <div class="row text-center">
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>虚拟主机</h2>
+                                            <h3>$85/月</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>250</strong> 邮件提醒</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>125GB</strong> 硬盘</p>
+                                            <p><i class="fa fa-database"></i> <strong>140GB</strong> 数据库</p>
+                                            <p><i class="fa fa-link"></i> <strong>60</strong> 可解析域名</p>
+                                            <p><i class="fa fa-life-ring"></i> <strong>24/7  </strong> 在线支持</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new"><span>立即订购</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>WordPress托管</h2>
+                                            <h3>$59/月</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>150</strong> 邮件提醒</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>65GB</strong> 硬盘</p>
+                                            <p><i class="fa fa-database"></i> <strong>60GB</strong> 数据库</p>
+                                            <p><i class="fa fa-link"></i> <strong>30</strong> 可解析域名</p>
+                                            <p><i class="fa fa-life-ring"></i> <strong>24/7  </strong> 在线支持</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new"><span>立即订购</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>独立主机<h2>
+                                            <h3>$85/月</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>250</strong> 邮件提醒</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>125GB</strong> 硬盘</p>
+                                            <p><i class="fa fa-database"></i> <strong>140GB</strong> 数据库</p>
+                                            <p><i class="fa fa-link"></i> <strong>60</strong> 可解析域名</p>
+                                            <p><i class="fa fa-life-ring"></i> <strong>24/7  </strong> 在线支持</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new"><span>立即订购</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end row -->
+                        </div><!-- end pane -->
+
+                        <div class="tab-pane fade" id="tab2">
+                            <div class="row text-center">
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>虚拟主机</h2>
+                                            <h3>$85/年</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>250</strong> 邮件提醒</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>125GB</strong> 硬盘</p>
+                                            <p><i class="fa fa-database"></i> <strong>140GB</strong> 数据库</p>
+                                            <p><i class="fa fa-link"></i> <strong>60</strong> 可解析域名</p>
+                                            <p><i class="fa fa-life-ring"></i> <strong>24/7  </strong> 在线支持</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new"><span>立即订购</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>WordPress托管</h2>
+                                            <h3>$59/年</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>150</strong> 邮件提醒</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>65GB</strong> 硬盘</p>
+                                            <p><i class="fa fa-database"></i> <strong>60GB</strong> 数据库</p>
+                                            <p><i class="fa fa-link"></i> <strong>30</strong> 可解析域名</p>
+                                            <p><i class="fa fa-life-ring"></i> <strong>24/7  </strong> 在线支持</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new"><span>立即订购</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>独立主机<h2>
+                                            <h3>$85/年</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>250</strong> 邮件提醒</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>125GB</strong> 硬盘</p>
+                                            <p><i class="fa fa-database"></i> <strong>140GB</strong> 数据库</p>
+                                            <p><i class="fa fa-link"></i> <strong>60</strong> 可解析域名</p>
+                                            <p><i class="fa fa-life-ring"></i> <strong>24/7  </strong> 在线支持</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new"><span>立即订购</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end row -->
+                        </div><!-- end pane -->
+                    </div><!-- end content -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('images/parallax_04.jpg');">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>推荐</h3>
+                <p>随机编写三位小伙伴成为我们的推荐人。 </p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="testi-carousel owl-carousel owl-theme">
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> 完美在线支持!</h3>
+                                <p class="lead">一段不明意义的推荐内容....</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="images/testi_01.png" alt="" class="img-fluid">
+                                <h4>一号受害者 </h4>
+                            </div>
+                        </div>
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i>很棒的服务！</h3>
+                                <p class="lead">一段不明意义的推荐内容....</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="images/testi_02.png" alt="" class="img-fluid">
+                                <h4>二号受害者 </h4>
+                            </div>
+                        </div>
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> 伟大而有才华的团队！</h3>
+                                <p class="lead">一段不明意义的推荐内容.... </p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="images/testi_03.png" alt="" class="img-fluid ">
+                                <h4>三号受害者 </h4>
+                            </div>
+                        </div>
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i>完美在线支持!</h3>
+                                <p class="lead">一段不明意义的推荐内容....</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="images/testi_01.png" alt="" class="img-fluid">
+                                <h4>一号受害者 </h4>
+                            </div>
+							
+                        </div><!-- end testimonial -->
+                    </div><!-- end carousel -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <div class="parallax section dbcolor">
+        <div class="container">
+            <div class="row logos">
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="images/logo_01.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="images/logo_02.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="images/logo_03.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="images/logo_04.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="images/logo_05.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="images/logo_06.png" alt="" class="img-repsonsive"></a>
+                </div>
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>关于我们</h3>
+                        </div>
+                        <p>只是一个课程作业的作业需求，不知道怎么的又敲上了代码，还好没忘记...没有意义的占位符，只是想占点空间......没有意义的占位符，只是想占点空间......没有意义的占位符，只是想占点空间...</p>
+                        <p>...没有意义的占位符，只是想占点空间......没有意义的占位符，只是想占点空间......没有意义的占位符，只是想占点空间...</p>
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+				<div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>更多信息k</h3>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="#">主页</a></li>
+                            <li><a href="#">博客</a></li>
+                            <li><a href="#">定价 </a></li>
+							<li><a href="#">关于 </a></li>
+							<li><a href="#">帮助</a></li>
+							<li><a href="#">加入我们</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>联系方式</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li><a href="mailto:#">一个@邮箱.com</a></li>
+                            <li><a href="#">www.baidu.com</a></li>
+                            <li>天津市河西区天津财经大学学生公寓a</li>
+                            <li>***一个电话号码***</li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">                   
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2021 <a href="#">想不到名字云</a> Design By : <a href="#">彭泓铭</a></p>
+                </div>
+
+                <div class="footer-right">
+                    <ul class="footer-links-soi">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-github"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+						<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+					</ul><!-- end links -->
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+	<script src="js/timeline.min.js"></script>
+	<script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+	</script>
+</body>
+</html>
